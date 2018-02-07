@@ -2,7 +2,8 @@ FROM busybox
 
 ENV URL https://dl.google.com/go/go1.9.3.src.tar.gz
 
-RUN cd /tmp && \
+RUN mkdir -p /tmp/docker-get && \
+  cd /tmp/docker-get && \
   wget "$URL"
 
-CMD ["/bin/cp", "/tmp/go1.9.3.src.tar.gz", "/data"]
+CMD ["/bin/sh", "-c", "cp /tmp/docker-get/* /data"]
