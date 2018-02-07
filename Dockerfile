@@ -1,6 +1,6 @@
 FROM busybox
 
-ENV URL https://dl.google.com/go/go1.9.3.src.tar.gz
+ENV URL https://github.com/nltk/nltk_data/archive/gh-pages.zip
 
 RUN mkdir -p /tmp/docker-get && \
   cd /tmp/docker-get && \
